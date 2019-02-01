@@ -143,11 +143,10 @@ class ViewController: UIViewController {
         light.shadowMode = .deferred
         let constraint = SCNLookAtConstraint(target: floorShadowNode)
         constraint.isGimbalLockEnabled = true
+
         let lightNode = SCNNode()
         lightNode.light = light
-        lightNode.position = SCNVector3(newPlaneData.1.x,
-                                        newPlaneData.1.y + Float(Nodes.DOOR_HEIGHT),
-                                        newPlaneData.1.z - Float(Nodes.WALL_LENGTH))
+        lightNode.position = SCNVector3(newPlaneData.1.x, newPlaneData.1.y + Float(Nodes.DOOR_HEIGHT), newPlaneData.1.z - Float(Nodes.WALL_LENGTH))
         lightNode.constraints = [constraint]
         sceneView.scene.rootNode.addChildNode(lightNode)
     }
