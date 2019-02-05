@@ -23,4 +23,12 @@ extension SCNVector3 {
     static func positionFromTransform(_ transform: matrix_float4x4) -> SCNVector3 {
         return SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
     }
+
+    static func centre() -> SCNVector3 {
+        return SCNVector3Make(0, 0, 0)
+    }
+
+    static func positionY(angle: Float) -> SCNVector3 {
+        return SCNVector3(0, angle.degreesToRadians, 0)
+    }
 }

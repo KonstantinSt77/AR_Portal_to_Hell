@@ -34,7 +34,7 @@ final class Nodes {
         return node
     }
     
-    class func wallSegmentNode(length: CGFloat = Constants.Wall.length, height: CGFloat = Constants.Wall.height, maskXUpperSide:Bool = true) -> SCNNode {
+    class func wallSegmentNode(length: CGFloat = Constants.Wall.length, height: CGFloat = Constants.Wall.height) -> SCNNode {
 
         let node = SCNNode()
         let wallSegment = SCNBox(width: Constants.Wall.width, height: height, length: length, chamferRadius: 0)
@@ -54,7 +54,7 @@ final class Nodes {
         
         let maskingWallSegmentNode = SCNNode(geometry: maskingWallSegment)
         maskingWallSegmentNode.renderingOrder = 100
-        maskingWallSegmentNode.position = SCNVector3(maskXUpperSide ? Constants.Wall.width : -Constants.Wall.width, 0, 0)
+        maskingWallSegmentNode.position = SCNVector3(Constants.Wall.width, 0, 0)
         node.addChildNode(maskingWallSegmentNode)
         
         return node

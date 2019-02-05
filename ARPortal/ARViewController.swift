@@ -84,44 +84,43 @@ class ARViewController: UIViewController {
         wallNode.position = newPlaneData.1
         let sideLength = Constants.Wall.length * 3
         let halfSideLength = sideLength * Constants.half
-        let endWallSegmentNode = Nodes.wallSegmentNode(length: sideLength, maskXUpperSide: true)
-        endWallSegmentNode.eulerAngles = SCNVector3(0, 90.0.degreesToRadians, 0)
+        let endWallSegmentNode = Nodes.wallSegmentNode(length: sideLength)
+        endWallSegmentNode.eulerAngles = SCNVector3.positionY(angle: 90.0)
         endWallSegmentNode.position = SCNVector3(0, Constants.Wall.height * Constants.half, Constants.Wall.length * -1.5)
         wallNode.addChildNode(endWallSegmentNode)
         
-        let sideAWallSegmentNode = Nodes.wallSegmentNode(length: sideLength, maskXUpperSide: true)
-        sideAWallSegmentNode.eulerAngles = SCNVector3(0, 180.0.degreesToRadians, 0)
+        let sideAWallSegmentNode = Nodes.wallSegmentNode(length: sideLength)
+        sideAWallSegmentNode.eulerAngles = SCNVector3.positionY(angle: 180.0)
         sideAWallSegmentNode.position = SCNVector3(Constants.Wall.length * -1.5, Constants.Wall.height * 0.5, 0)
         wallNode.addChildNode(sideAWallSegmentNode)
         
-        let sideBWallSegmentNode = Nodes.wallSegmentNode(length: sideLength, maskXUpperSide: true)
+        let sideBWallSegmentNode = Nodes.wallSegmentNode(length: sideLength)
         sideBWallSegmentNode.position = SCNVector3(Constants.Wall.length * 1.5, Constants.Wall.height * 0.5, 0)
         wallNode.addChildNode(sideBWallSegmentNode)
         
         let doorSideLength = (sideLength - Constants.Door.width) * Constants.half
-        let leftDoorSideNode = Nodes.wallSegmentNode(length: doorSideLength, maskXUpperSide: true)
-        leftDoorSideNode.eulerAngles = SCNVector3(0, 270.0.degreesToRadians, 0)
+        let leftDoorSideNode = Nodes.wallSegmentNode(length: doorSideLength)
+        leftDoorSideNode.eulerAngles = SCNVector3.positionY(angle: 270.0)
         leftDoorSideNode.position = SCNVector3(-halfSideLength + Constants.half * doorSideLength, Constants.Wall.height * Constants.half, Constants.Wall.length * 1.5)
         wallNode.addChildNode(leftDoorSideNode)
         
-        let rightDoorSideNode = Nodes.wallSegmentNode(length: doorSideLength, maskXUpperSide: true)
-        rightDoorSideNode.eulerAngles = SCNVector3(0, 270.0.degreesToRadians, 0)
+        let rightDoorSideNode = Nodes.wallSegmentNode(length: doorSideLength)
+        rightDoorSideNode.eulerAngles = SCNVector3.positionY(angle: 270.0)
         rightDoorSideNode.position = SCNVector3(halfSideLength - Constants.half * doorSideLength, Constants.Wall.height * Constants.half, Constants.Wall.length * 1.5)
         wallNode.addChildNode(rightDoorSideNode)
         
         let aboveDoorNode = Nodes.wallSegmentNode(length: Constants.Door.width, height: Constants.Wall.height -  Constants.Door.height)
-        aboveDoorNode.eulerAngles = SCNVector3(0, 270.0.degreesToRadians, 0)
+        aboveDoorNode.eulerAngles = SCNVector3.positionY(angle: 270.0)
         aboveDoorNode.position = SCNVector3(0, Constants.Wall.height - Constants.Wall.height - Constants.Door.height * Constants.half, Constants.Wall.length * 1.5)
         wallNode.addChildNode(aboveDoorNode)
         
         let floorNode = Nodes.plane(pieces: 3, maskYUpperSide: false)
-        floorNode.position = SCNVector3(0, 0, 0)
+        floorNode.position = SCNVector3.centre()
         wallNode.addChildNode(floorNode)
         
         let roofNode = Nodes.plane(pieces: 3, maskYUpperSide: true)
         roofNode.position = SCNVector3(0, Constants.Wall.height, 0)
         wallNode.addChildNode(roofNode)
-        
         sceneView.scene.rootNode.addChildNode(wallNode)
 
         let floor = SCNFloor()
