@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06391F401F0A2FA2000CBEAA /* ReplayKitRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06391F3F1F0A2FA2000CBEAA /* ReplayKitRecording.swift */; };
 		709C7D191F09498C002B9025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C7D181F09498C002B9025 /* AppDelegate.swift */; };
-		709C7D1B1F09498C002B9025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C7D1A1F09498C002B9025 /* ViewController.swift */; };
+		709C7D1B1F09498C002B9025 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C7D1A1F09498C002B9025 /* ARViewController.swift */; };
 		709C7D1E1F09498C002B9025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709C7D1C1F09498C002B9025 /* Main.storyboard */; };
 		709C7D201F09498C002B9025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709C7D1F1F09498C002B9025 /* Assets.xcassets */; };
 		709C7D231F09498D002B9025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709C7D211F09498D002B9025 /* LaunchScreen.storyboard */; };
 		709C7D2B1F094BAE002B9025 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C7D2A1F094BAE002B9025 /* Extensions.swift */; };
 		709C7D301F094C5B002B9025 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C7D2F1F094C5B002B9025 /* Nodes.swift */; };
+		B5EBA21F2209D96600B1B174 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EBA21E2209D96600B1B174 /* Constants.swift */; };
 		B5EE422D22036AB2008935F3 /* hellFloor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5EE422B22036AB2008935F3 /* hellFloor.jpg */; };
 		B5EE422E22036AB2008935F3 /* hell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5EE422C22036AB2008935F3 /* hell.jpg */; };
 		B5EE423022036DC2008935F3 /* hellFloor2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5EE422F22036DC2008935F3 /* hellFloor2.jpg */; };
@@ -23,16 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06391F3F1F0A2FA2000CBEAA /* ReplayKitRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayKitRecording.swift; sourceTree = "<group>"; };
-		709C7D151F09498C002B9025 /* AR-Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR-Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		709C7D151F09498C002B9025 /* ARPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		709C7D181F09498C002B9025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		709C7D1A1F09498C002B9025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		709C7D1A1F09498C002B9025 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		709C7D1D1F09498C002B9025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		709C7D1F1F09498C002B9025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		709C7D221F09498D002B9025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		709C7D241F09498D002B9025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		709C7D2A1F094BAE002B9025 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		709C7D2F1F094C5B002B9025 /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
+		B5EBA21E2209D96600B1B174 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B5EE422B22036AB2008935F3 /* hellFloor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hellFloor.jpg; sourceTree = "<group>"; };
 		B5EE422C22036AB2008935F3 /* hell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hell.jpg; sourceTree = "<group>"; };
 		B5EE422F22036DC2008935F3 /* hellFloor2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hellFloor2.jpg; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		709C7D0C1F09498C002B9025 = {
 			isa = PBXGroup;
 			children = (
-				709C7D171F09498C002B9025 /* AR-Portal */,
+				709C7D171F09498C002B9025 /* ARPortal */,
 				709C7D161F09498C002B9025 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,46 +62,46 @@
 		709C7D161F09498C002B9025 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				709C7D151F09498C002B9025 /* AR-Portal.app */,
+				709C7D151F09498C002B9025 /* ARPortal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		709C7D171F09498C002B9025 /* AR-Portal */ = {
+		709C7D171F09498C002B9025 /* ARPortal */ = {
 			isa = PBXGroup;
 			children = (
-				709C7D1A1F09498C002B9025 /* ViewController.swift */,
+				709C7D1A1F09498C002B9025 /* ARViewController.swift */,
 				709C7D2F1F094C5B002B9025 /* Nodes.swift */,
 				709C7D2A1F094BAE002B9025 /* Extensions.swift */,
+				B5EBA21E2209D96600B1B174 /* Constants.swift */,
 				709C7D1C1F09498C002B9025 /* Main.storyboard */,
 				709C7D211F09498D002B9025 /* LaunchScreen.storyboard */,
-				B5EE42282203675E008935F3 /* Defaults */,
+				B5EE42282203675E008935F3 /* Default */,
 			);
-			path = "AR-Portal";
+			path = ARPortal;
 			sourceTree = "<group>";
 		};
-		B5EE42282203675E008935F3 /* Defaults */ = {
+		B5EE42282203675E008935F3 /* Default */ = {
 			isa = PBXGroup;
 			children = (
+				709C7D181F09498C002B9025 /* AppDelegate.swift */,
+				709C7D1F1F09498C002B9025 /* Assets.xcassets */,
+				709C7D241F09498D002B9025 /* Info.plist */,
 				B5EE423322036F33008935F3 /* wellcome.jpg */,
 				B5EE422C22036AB2008935F3 /* hell.jpg */,
 				B5EE423122036E50008935F3 /* hellWall2.jpg */,
 				B5EE422F22036DC2008935F3 /* hellFloor2.jpg */,
 				B5EE422B22036AB2008935F3 /* hellFloor.jpg */,
-				709C7D181F09498C002B9025 /* AppDelegate.swift */,
-				709C7D241F09498D002B9025 /* Info.plist */,
-				06391F3F1F0A2FA2000CBEAA /* ReplayKitRecording.swift */,
-				709C7D1F1F09498C002B9025 /* Assets.xcassets */,
 			);
-			path = Defaults;
+			path = Default;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		709C7D141F09498C002B9025 /* AR-Portal */ = {
+		709C7D141F09498C002B9025 /* ARPortal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 709C7D271F09498D002B9025 /* Build configuration list for PBXNativeTarget "AR-Portal" */;
+			buildConfigurationList = 709C7D271F09498D002B9025 /* Build configuration list for PBXNativeTarget "ARPortal" */;
 			buildPhases = (
 				709C7D111F09498C002B9025 /* Sources */,
 				709C7D121F09498C002B9025 /* Frameworks */,
@@ -111,9 +111,9 @@
 			);
 			dependencies = (
 			);
-			name = "AR-Portal";
+			name = ARPortal;
 			productName = "AR-Portal";
-			productReference = 709C7D151F09498C002B9025 /* AR-Portal.app */;
+			productReference = 709C7D151F09498C002B9025 /* ARPortal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 709C7D101F09498C002B9025 /* Build configuration list for PBXProject "AR-Portal" */;
+			buildConfigurationList = 709C7D101F09498C002B9025 /* Build configuration list for PBXProject "ARPortal" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				709C7D141F09498C002B9025 /* AR-Portal */,
+				709C7D141F09498C002B9025 /* ARPortal */,
 			);
 		};
 /* End PBXProject section */
@@ -172,11 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06391F401F0A2FA2000CBEAA /* ReplayKitRecording.swift in Sources */,
-				709C7D1B1F09498C002B9025 /* ViewController.swift in Sources */,
+				709C7D1B1F09498C002B9025 /* ARViewController.swift in Sources */,
 				709C7D2B1F094BAE002B9025 /* Extensions.swift in Sources */,
 				709C7D191F09498C002B9025 /* AppDelegate.swift in Sources */,
 				709C7D301F094C5B002B9025 /* Nodes.swift in Sources */,
+				B5EBA21F2209D96600B1B174 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 487D8YHE27;
-				INFOPLIST_FILE = "$(SRCROOT)/AR-Portal/Defaults/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ARPortal/Default/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sks.HellPortal;
@@ -325,7 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 487D8YHE27;
-				INFOPLIST_FILE = "$(SRCROOT)/AR-Portal/Defaults/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ARPortal/Default/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sks.HellPortal;
@@ -338,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		709C7D101F09498C002B9025 /* Build configuration list for PBXProject "AR-Portal" */ = {
+		709C7D101F09498C002B9025 /* Build configuration list for PBXProject "ARPortal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				709C7D251F09498D002B9025 /* Debug */,
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		709C7D271F09498D002B9025 /* Build configuration list for PBXNativeTarget "AR-Portal" */ = {
+		709C7D271F09498D002B9025 /* Build configuration list for PBXNativeTarget "ARPortal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				709C7D281F09498D002B9025 /* Debug */,

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AR-Portal.xcodeproj">
+      location = "self:/Users/konstantin/Downloads/arkit-portal/ARPortal.xcodeproj">
    </FileRef>
 </Workspace>
