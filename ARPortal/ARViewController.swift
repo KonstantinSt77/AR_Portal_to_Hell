@@ -13,6 +13,7 @@ class ARViewController: UIViewController {
     @IBOutlet weak var planeSearchLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
 
+//        Нужен нам для того что бы понимать обнаружел ли ARKit поверхность для отрисовки
     var planeCount = 0 {
         didSet {
             updatePlaneOverlay()
@@ -29,8 +30,14 @@ class ARViewController: UIViewController {
         super.viewDidLoad()
         
         sceneView.delegate = self
+
+//        Логическое значение, которое указывает на то, создает ли ARKit и обновляет ли SceneKit источники света в сцене представления.
         sceneView.automaticallyUpdatesLighting = false
-        
+
+//        Это позволит нам видеть ключевые точки, которые находит ARKit.
+        sceneView.debugOptions = ARSCNDebugOptions.showFeaturePoints
+
+//        Вешаем создание портала по тапу на ARSCNView
         let tapGestureRecognizer = UITapGestureRecognizer()
         tapGestureRecognizer.addTarget(self, action: #selector(didTapOnSurface))
         sceneView.addGestureRecognizer(tapGestureRecognizer)
@@ -38,17 +45,28 @@ class ARViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
-        configuration.isLightEstimationEnabled = true
-        
-        sceneView.session.run(configuration)
+
+//        Выбор конфигурации сессии зависит от модели устройства, на котором запустили приложение.
+//        Крайне важно сделать эту проверку.
+//        Иначе, в случае неверной конфигурации, сессия пришлет ошибку и игра не запустится вообще.
+
+        if ARWorldTrackingConfiguration.isSupported {
+            let configuration = ARWorldTrackingConfiguration()
+            configuration.planeDetection = .horizontal
+            configuration.isLightEstimationEnabled = true
+
+//        Запускаем сессию когда view Appear
+            sceneView.session.run(configuration)
+        } else {
+            let configuration = AROrientationTrackingConfiguration()
+            sceneView.session.run(configuration)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
+//        Не забываем останавливть сессию когда view Disappear
         sceneView.session.pause()
     }
 
@@ -64,6 +82,7 @@ class ARViewController: UIViewController {
     }
 
     private func anyPlaneFrom(location: CGPoint) -> (SCNNode, SCNVector3)? {
+//        Выполняем поиск реальных объектов или якорей AR на изображении с камеры, соответствующем точке в представлении SceneKit.
         let results = sceneView.hitTest(location, types: ARHitTestResult.ResultType.existingPlaneUsingExtent)
         guard results.count > 0, let anchor = results[0].anchor, let node = sceneView.node(for: anchor) else {
             return nil
